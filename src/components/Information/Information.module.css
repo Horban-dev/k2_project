@@ -1,0 +1,54 @@
+.container {
+    position: relative;
+    overflow: hidden;
+    height: 150vh;
+}
+
+.img {
+    background-image: url('https://k2.moncler.com/wp-content/uploads/2014/10/montagna.jpg');
+    background-position: top center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.bigText {
+    width: 1142px;
+    margin: auto;
+    padding-bottom: 120px;
+    padding-top: 120px;
+    color: #ffffff;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    font-size: 35px;
+
+}
+
+.title {
+    font-family: 'Cinzel', serif;
+    padding-bottom: 20px;
+}
+
+.text {
+    font-family: 'Aboreto', cursive;
+    text-align: justify;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: .2rem;
+    margin-top: 50px;
+}
+
+.divider {
+    width: 1px;
+    background: white;
+    height: 60px;
+    margin: 0 auto;
+}

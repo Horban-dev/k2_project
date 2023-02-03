@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.carousel-control-prev,
+.carousel-control-next {
+  top: 45vh !important;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 80px !important;
+  height: 80px !important;
+  color: red !important;
+}
