@@ -8,15 +8,14 @@ export default function App() {
   const handleClickScroll = () => {
     const element = document.getElementById('sec');
     if (element) {
-      // 👇 Will scroll smoothly to the top of the next section
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
   return (
     <div>
       <Header handleClickScroll={handleClickScroll}/>
-      <Slider id={'sec'}/>
-      <Information/>
+      <Information id={'sec'}/>
+      <Slider />
     </div>
   );
 } 

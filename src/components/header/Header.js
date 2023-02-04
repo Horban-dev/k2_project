@@ -6,9 +6,10 @@ const Header = ({handleClickScroll}) => {
     <div className={header.container}>
         <div className={header.links}>
             <a href='#'>Home</a>
-            <a href='#'>Photos 🏔</a>
-            <a href='#'>Information </a>
-            <a href='#'>Facts</a>
+            <a href='#'>History 🏔</a>
+            <a href='#'>First conquest</a>
+            <a href='#'>Nowdays</a>
+            <a href='#'>Photos</a>
             <a href='#'>Videos</a>
             <a href='#'>links</a>
         </div>
