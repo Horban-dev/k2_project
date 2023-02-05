@@ -36,10 +36,17 @@ const Information = ({id}) => {
         <div id={id} className={info.container}>
             <div className={info.img} data-background="https://k2.moncler.com/wp-content/uploads/2014/10/montagna.jpg"></div>
             <div className={info.general_information}>
-                <div onClick={scrollToBOt} className={info.bottom}>
-                    <span>First conquest</span>
-                    <AiOutlineDown/>
-                </div>
+                {
+                    (first && firstFirst && lastFirst && lastMid && last) ? 
+                   
+                    <div onClick={scrollToBOt} className={info.bottom}>
+                    <span>NEXT</span>
+                    <AiOutlineDown/> 
+                    </div>
+                    
+                    : 
+                    null
+                }
                 <div className={info.title}>
                    <h2>K-2</h2>
                    <h5>HISTORY</h5>
@@ -114,21 +121,6 @@ const Information = ({id}) => {
 };
 
 export default Information;
-
-
-
-
-
-
-{/* <p className={info.text}>
-K2, at 8,611 metres above sea level, is the second-highest mountain on Earth. <br/>
-K2 also became popularly known as the Savage Mountain after George Bell—a climber on the 1953 American expedition—told reporters, <em>"It's a savage mountain that tries to kill you".</em>
-Chogori is known as "Savage Mountain" because of the extreme difficulty of climbing. As of June 2018, the death rate was 23% for 367 climb attempts. <br/>
-Chogori was discovered by a European expedition in 1856. <br/>
-In 1902, the first attempt was made by Oscar Eckenstein and Aleister Crowley, but ended unsuccessfully. <br/>They were able to climb only to a height of 6525 m.<br/>
-1938 - American expedition of Dr. Charles S. Houston hit 7925 m.<br/>
-1939 - The American expedition of Fritz Weisner set a new record by climbing to a height of 8382 m of the North-East Ridge of Abruzza.
-</p> */}
 
 
 {/* <p className={info.text}>

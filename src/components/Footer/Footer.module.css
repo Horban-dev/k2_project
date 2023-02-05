@@ -1,0 +1,37 @@
+.container {
+    height: 15vh;
+    align-items: center;
+}
+
+.col {
+    border-right: 2px solid black;
+    display: block;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.col:last-child {
+    border: none;
+}
+
+.author {
+    text-align: center;
+    margin: 13px auto;
+    font-family: 'Aboreto', cursive;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+}
+
+.link {
+    color: black !important;
+    margin-left: 10px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: 'Aboreto', cursive;
+}

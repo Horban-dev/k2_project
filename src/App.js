@@ -2,6 +2,7 @@ import Header from './components/header/Header';
 import Slider from './components/Slider/Slider';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Information from './components/Information/Information';
+import Footer from './components/Footer/Footer';
 
 
 export default function App() {
@@ -15,7 +16,8 @@ export default function App() {
     <div>
       <Header handleClickScroll={handleClickScroll}/>
       <Information id={'sec'}/>
-      <Slider />
+      {/* <Slider /> */}
+      <Footer />
     </div>
   );
 } 

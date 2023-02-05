@@ -22,11 +22,11 @@
     position: sticky;
 }
 
-a:hover {
+.link:hover {
     font-size: 150%;
 }
 
-a {
+.link {
     text-decoration: none !important;
     font-size: 20px;
     height: 100px;

@@ -5,13 +5,13 @@ const Header = ({handleClickScroll}) => {
   return (
     <div className={header.container}>
         <div className={header.links}>
-            <a href='#'>Home</a>
-            <a href='#'>History 🏔</a>
-            <a href='#'>First conquest</a>
-            <a href='#'>Nowdays</a>
-            <a href='#'>Photos</a>
-            <a href='#'>Videos</a>
-            <a href='#'>links</a>
+            <a className={header.link} href='#'>Home</a>
+            <a className={header.link} href='#'>History 🏔</a>
+            <a className={header.link} href='#'>First conquest</a>
+            <a className={header.link} href='#'>Nowdays</a>
+            <a className={header.link} href='#'>Photos</a>
+            <a className={header.link} href='#'>Videos</a>
+            <a className={header.link} href='#'>links</a>
         </div>
         
         <h1 className={header.textTitle}>Chogori</h1>
