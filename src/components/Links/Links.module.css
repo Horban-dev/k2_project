@@ -1,0 +1,27 @@
+header {
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.9;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    padding-top: 15px;
+    z-index: 15;
+    width: 100%;
+    top: 0;
+    position: fixed;
+}
+
+header:hover {
+    font-size: 150%;
+}
+
+.link {
+    text-decoration: none !important;
+    font-size: 20px;
+    height: 70px;
+    transition: all 0.3s ease 0s;
+    color: white !important;
+    cursor: pointer;
+    font-family: 'Aboreto', cursive;
+    text-shadow: 1px 1px 1px white;
+}

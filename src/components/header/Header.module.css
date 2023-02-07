@@ -4,41 +4,19 @@
 
 .container {
     background-image: url("https://www.meteorologiaenred.com/wp-content/uploads/2020/10/ascenso-del-k2.jpg");
+    background-position: top center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    left: 0;
+    width: 100%;
+    z-index: -1;
     filter: grayscale(50%);
     background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: 94% center;
-    height: 100vh;
-}
-
-.links {
-    display: flex;
-    justify-content: space-evenly;
-    box-sizing: border-box;
-    text-decoration: none;
-    padding-top: 20px;
-    z-index: 15;
-    opacity: 1;
-    position: sticky;
-}
-
-.link:hover {
-    font-size: 150%;
-}
-
-.link {
-    text-decoration: none !important;
-    font-size: 20px;
-    height: 100px;
-    transition: all 0.3s ease 0s;
-    color: white !important;
-    cursor: pointer;
-    font-family: 'Aboreto', cursive;
-    text-shadow: 1px 1px 1px white;
 }
 
 .title {
-    margin-left: 40vh;
+    margin-left: 27vh;
     color: black;
     font-size: 80px;
     font-family: 'Cinzel', serif;
@@ -46,19 +24,22 @@
 }
 
 .textTitle {
-    padding-left: 20vh;
+    padding-left: 10vh;
     color: black;
     font-size: 80px;
     font-family: 'Cinzel', serif;
     text-shadow: 1px 1px 2px white;
     opacity: 1;
+    padding-top: 20vh;
 }
 
 .text {
-    margin-top: 40vh;
+    margin-top: 35vh;
+    background: black;
     text-align: center;
     color: white;
-    font-size: 20px;
+    font-size: 17px;
+    letter-spacing: 0.25rem;
     font-family: 'Aboreto', cursive;
     text-shadow: 1px 1px 1px white;
     transform: scale(0.94);

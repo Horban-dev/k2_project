@@ -1,8 +1,31 @@
-.container {
-    height: 100%;
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+
+.con {
+    height: 120vh;
+    padding-bottom: 10px;
+    background: black;
+    background-position: top center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+.title {
+    font-family: 'Prata', serif;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 .slide {
-    height: 100vh;
+    height: 90vh;
     width: 100%;
+}
+
+.carousel {
+    width: 88% !important;
+    margin: 0 auto;
 }

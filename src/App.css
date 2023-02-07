@@ -1,0 +1,37 @@
+.carousel-control-next,
+.carousel-control-prev {
+    position: absolute;
+    top: 10px;
+    bottom: 200px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    background: 0 0;
+    border: 0;
+    opacity: .5;
+    transition: opacity .15s ease;
+}
+
+.carousel-fade .carousel-item-next.carousel-item-start,
+.carousel-fade .carousel-item-prev.carousel-item-end,
+.carousel-fade .carousel-item.active {
+    z-index: 1;
+    opacity: 0.9;
+}
+
+
+.visible {
+    top: 0;
+    transition: top 0.4s ease-out;
+}
+
+.hidden {
+    position: fixed;
+    top: -85px;
+    transition: top 0.4s ease-out;
+}

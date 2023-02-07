@@ -12,8 +12,9 @@ const Slider = () => {
     {id: 6, src: "https://sp-images.summitpost.org/628397.jpg?auto=format&fit=max&h=1000&ixlib=php-2.1.1&q=35&s=f5f0e4d332cd1e250df5bcf84e0bc1fc",  alt: "Six slide"},
   ]
   return (
-    <div className={slider.container}>
-    <Carousel variant="light" indicators={true} fade={true} className={slider.carousel}>
+    <div className={slider.con}>
+      <h1 className={slider.title}>K-2 PHOTOS</h1>
+      <Carousel variant="light" indicators={true} fade={true} className={slider.carousel}>
       {items.map((item) => (
          <Carousel.Item >
          <img
@@ -23,8 +24,10 @@ const Slider = () => {
          />
        </Carousel.Item>
       ))}
-    </Carousel>
+      </Carousel>
+  
     </div>
+   
   );
 }
 
