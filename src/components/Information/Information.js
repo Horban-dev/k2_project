@@ -38,12 +38,10 @@ const Information = ({id}) => {
             <div className={info.general_information}>
                 {
                     (first && firstFirst && lastFirst && lastMid && last) ? 
-                   
                     <div onClick={scrollToBOt} className={info.bottom}>
                     <span>NEXT</span>
                     <AiOutlineDown/> 
                     </div>
-                    
                     : 
                     null
                 }
@@ -99,18 +97,18 @@ const Information = ({id}) => {
                 <Carousel showArrows={true} selectedItem={false} showStatus={false} infiniteLoop={true}>
                 <div>
                     <img alt='first_expedition_team' src="https://upload.wikimedia.org/wikipedia/commons/4/43/Italian_K2_expedition%2C1954%2C_version_2_%28cropped%29.jpg"/>
-                        <p className="legend">The first reachable peak of K2 Italian expedition in 1954 under the Ardito Desio.</p>
-                    </div>
+                    <p className="legend">The first reachable peak of K2 Italian expedition in 1954 under the Ardito Desio.</p>
+                </div>
                 <div>
                     <img alt='first_climbers' src="https://upload.wikimedia.org/wikipedia/commons/a/af/Compagnoni_and_Lacedelli_1954.jpg" />
                     <p className="legend">On 31 July 1954, Italian climbers Achille Compagnoni and Lino Lacedelli became the first people to reach the summit of K2.</p>
                 </div>  
                 <div>
-                <img alt='sa' src="https://4sport.ua/_upl/2/1407/5_1406798524.jpg" />
+                    <img alt='sa' src="https://4sport.ua/_upl/2/1407/5_1406798524.jpg" />
                     <p className="legend">K2 expedition team, 1954.</p>
                 </div>
                 <div>
-                <img alt='sa' src="https://i.guim.co.uk/img/media/d1042c4b7ed351952737001cdd474eb8fb3fb9c6/0_561_4961_2977/master/4961.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=c80471f23a08e1f33433437702ba648e" />
+                    <img alt='sa' src="https://i.guim.co.uk/img/media/d1042c4b7ed351952737001cdd474eb8fb3fb9c6/0_561_4961_2977/master/4961.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=c80471f23a08e1f33433437702ba648e" />
                     <p className="legend">Italian mountaineers conquer K2 – archive, 1954.</p>
                 </div>
                 </Carousel>
@@ -122,9 +120,3 @@ const Information = ({id}) => {
 
 export default Information;
 
-
-{/* <p className={info.text}>
-                K2, at 8,611 metres above sea level, is the second-highest mountain on Earth. <br/>
-                K2 also became popularly known as the Savage Mountain after George Bell—a climber on the 1953 American expedition—told reporters, <em>"It's a savage mountain that tries to kill you".</em>
-                Chogori is known as "Savage Mountain" because of the extreme difficulty of climbing. As of June 2018, the death rate was 23% for 367 climb attempts. <br/>
-                </p> */}

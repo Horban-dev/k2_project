@@ -16,12 +16,59 @@ header:hover {
 }
 
 .link {
+    height: 70px;
     text-decoration: none !important;
     font-size: 20px;
-    height: 70px;
+    border: none;
+    background-color: black;
     transition: all 0.3s ease 0s;
     color: white !important;
     cursor: pointer;
     font-family: 'Aboreto', cursive;
     text-shadow: 1px 1px 1px white;
+}
+
+.link:hover {
+    font-size: 1.2rem;
+}
+
+.drop {
+    position: absolute;
+    z-index: 10;
+    background-color: black;
+    margin: 0 0 0 -35px;
+}
+
+.drop ul {
+    display: contents;
+}
+
+.dropdownContent {
+    top: 50px;
+    color: white;
+
+    list-style-type: none;
+    align-items: center;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdownContent a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.dropdownContent a:hover {
+    color: #f1b500;
+    cursor: pointer;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
 }

@@ -1,4 +1,4 @@
-import Header from './components/header/Header';
+import MainScreen from './components/header/MainScreen';
 import Slider from './components/Slider/Slider';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Information from './components/Information/Information';
@@ -7,21 +7,23 @@ import Links from './components/Links/Links';
 import './App.css';
 import Nimsdai from './components/Nimsdai/Nimsdai';
 
+
 export default function App() {
-  const handleClickScroll = () => {
-    const element = document.getElementById('sec');
+  const handleClickScroll = (id) => {
+    const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
   return (
     <>
-      <Links/>
-      <Header handleClickScroll={handleClickScroll}/>
+      <Links handleClickScroll={handleClickScroll}/>
+      <MainScreen id={'home'} handleClickScroll={handleClickScroll}/>
       <Information id={'sec'}/>
-      <Slider />
-      <Nimsdai/>
-      <Footer />
+      <Slider id={'slide'}/>
+      {/* <Nimsdai id={'nimsdai'}/> */}
+      <Footer id={'footer'} />
     </>
   );
 } 

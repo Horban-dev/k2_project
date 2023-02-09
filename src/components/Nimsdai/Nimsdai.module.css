@@ -93,8 +93,7 @@ blockquote p {
 .team {
     margin: 10px auto;
     align-items: center;
-    border: 3px solid rgb(170, 123, 31);
-    border-radius: 7px;
+    border: 2px solid rgb(170, 123, 31);
     background-color: white;
 }
 
@@ -111,7 +110,6 @@ blockquote p {
 }
 
 .col {
-    width: 20px;
     height: 200px;
     overflow: hidden;
     margin: 0 auto;
@@ -121,12 +119,13 @@ blockquote p {
     width: 90%;
     height: 90%;
     transition: 0.5s all ease-in-out;
+    transition-duration: 2s;
 }
 
 .raw img:hover {
     object-fit: scale-down;
-    border: 1px solid black;
-    transform: scale(1.5);
+
+    transform: scale(1.2);
 }
 
 .raw span {
