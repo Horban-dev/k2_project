@@ -16,12 +16,18 @@ const Articles = () => {
         {id: 3, img: nyt, link: 'https://www.nytimes.com/2021/01/19/sports/summit-k2-nepalese-sherpas.html', title: 'How Climbers Reached the Summit of K2 in Winter for the First Time', date: 'January 19, 2021'},
         {id:4, img: loveexploring, link: 'https://www.loveexploring.com/news/108161/every-step-counts-nimsdai-nims-purja-on-being-the-first-to-conquer-k2', title: '"Every step counts": Nimsdai ‘Nims’ Purja on being the first to conquer K2 in winter', date: 'March 15, 2022'},
         {id: 5, img: sgbmedia, link: 'https://sgbonline.com/pressrelease/osprey-sponsors-nimsdai-purja-in-bid-for-k2-winter-2020-21-ascent/', title: 'Osprey Sponsors Nimsdai Purja In Bid For K2 Winter 2020/21 Ascent', date: 'January 7, 2021'},
-        {id: 5, img: sgbmedia, link: 'https://sgbonline.com/pressrelease/osprey-sponsors-nimsdai-purja-in-bid-for-k2-winter-2020-21-ascent/', title: 'Osprey Sponsors Nimsdai Purja In Bid For K2 Winter 2020/21 Ascent', date: 'January 7, 2021'}
+        {id: 6, img: sgbmedia, link: 'https://sgbonline.com/pressrelease/osprey-sponsors-nimsdai-purja-in-bid-for-k2-winter-2020-21-ascent/', title: 'Osprey Sponsors Nimsdai Purja In Bid For K2 Winter 2020/21 Ascent', date: 'January 7, 2021'}
     ]
     const [visible, setVisible] = useState(2);
-
+    const [articlesFinished, setArticlesFinished] = useState(false)
+    console.log(visible)
     const showMoreItems = () => {
-        setVisible((prevValue) => prevValue + 2);
+        if(visible > dat.length) {
+            setArticlesFinished(true)
+        } else {
+            setVisible((prevValue) => prevValue + 2);
+        }
+       
     };
     return (
         <>
@@ -47,9 +53,17 @@ const Articles = () => {
           </Row>
     </Container>
     <div onClick={showMoreItems} className={art.btn}>
-        <button>Load more</button>
-        <br></br>
-        <AiOutlinePlusCircle className={art.icon}/>
+        {
+            articlesFinished ? 
+            <button disabled className={art.button}>There are currently no more articles available...</button> :
+            <>
+                <button className={art.button}>More articles</button>
+                <br></br>
+                <AiOutlinePlusCircle className={art.icon}/>
+            </>
+            
+        }
+        
     </div>
         </>
     );

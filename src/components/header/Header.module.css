@@ -148,3 +148,96 @@ h.text3:nth-child(14) {
     height: 70px;
     width: 110px;
 }
+
+@media screen and (max-width: 1048px) {
+    .textTitle {
+        padding-left: 9vh;
+        color: black;
+        font-size: 71px;
+        font-family: 'Cinzel', serif;
+        text-shadow: 1px 1px 2px white;
+        opacity: 1;
+        padding-top: 20vh;
+    }
+
+    .title {
+        margin-left: 20vh;
+    }
+
+    .text {
+        margin-top: 30vh;
+    }
+}
+
+@media screen and (min-width: 716px) {
+    .textTitle {
+        color: black;
+        font-size: 72px;
+        font-family: 'Cinzel', serif;
+        text-shadow: 1px 1px 2px white;
+        opacity: 1;
+        padding-top: 21vh;
+    }
+
+    .title {
+        margin-left: 25vh;
+    }
+
+    .text {
+        margin-top: 30vh;
+    }
+}
+
+@media screen and (min-width: 539px) {
+
+    .text {
+        margin-top: 30vh;
+    }
+
+
+}
+
+@media screen and (max-width: 538px) {
+    .container {
+        width: 100%;
+    }
+
+    .text {
+        margin-top: 30vh;
+    }
+
+    .title {
+        margin-left: 15vh;
+    }
+
+    .textTitle {
+        padding-left: 25px;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .container {
+        width: 100%;
+    }
+
+    .text {
+
+        margin: 0 auto;
+
+    }
+
+    .title {
+        margin-left: 15vh;
+        font-size: 70px;
+    }
+
+    .iconDiv {
+        color: white;
+    }
+
+
+    .textTitle {
+        padding-left: 15px;
+        font-size: 57px;
+    }
+}

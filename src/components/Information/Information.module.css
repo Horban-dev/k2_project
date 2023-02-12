@@ -89,8 +89,7 @@
 }
 
 .general_information {
-    width: 1142px;
-    margin: 20px auto;
+    margin: 20px 50px;
     color: #ffffff;
     position: relative;
     text-align: center;
@@ -233,5 +232,218 @@
 
     100% {
         font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .lastText {
+        position: static;
+        height: 55px;
+        width: 80vh;
+        font-size: 14px;
+    }
+
+    .lastMidText {
+        top: 10px;
+        width: 75vh;
+        left: 16vh;
+        font-size: 12px;
+    }
+
+    .lastMid {
+        left: 18%;
+    }
+
+    .lastFirstText {
+        position: absolute;
+        top: 20px;
+        width: 63vh;
+        left: 70px;
+        font-size: 12px;
+    }
+
+    .first {
+        position: absolute;
+        bottom: 110px;
+        left: 30%;
+    }
+
+    .firstText {
+        height: 40px;
+        width: 65vh;
+        top: 11px;
+        left: 60px;
+        font-size: 12px;
+    }
+
+    .bottom {
+        height: 26vh;
+        bottom: 17vh;
+        width: 7vh;
+    }
+
+    .firstFirstText {
+        right: 70px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 413px) {
+    .last {
+        position: absolute;
+    }
+
+    .lastText {
+        position: absolute;
+        top: 0px;
+        height: 37px;
+        width: 24vh;
+        bottom: 102px;
+        font-size: 12px;
+        right: 73px;
+    }
+
+    .lastMid {
+        left: 5%;
+    }
+
+    .lastMidText {
+        position: absolute;
+        top: 10px;
+        width: 28vh;
+        left: 10vh;
+        font-size: 11px;
+    }
+
+    .lastFirstText {
+        position: absolute;
+        top: 20px;
+        width: 32vh;
+        left: 62px;
+        font-size: 11px;
+    }
+
+    .first {
+        position: absolute;
+        bottom: 105px;
+        left: 20%;
+    }
+
+    .firstText {
+        position: absolute;
+        height: 40px;
+        width: 29vh;
+        top: 8px;
+        left: 64px;
+        font-size: 11px;
+    }
+
+    .firstFirst {
+        right: 9%;
+    }
+
+    .firstFirstText {
+        width: 25vh;
+        font-size: 11px;
+    }
+
+}
+
+@media screen and (max-width: 992px) {
+    .last {
+        position: absolute;
+    }
+
+    .lastText {
+        position: absolute;
+        top: 0px;
+        height: 37px;
+        width: 24vh;
+        bottom: 102px;
+        font-size: 12px;
+        right: 73px;
+    }
+
+    .lastMid {
+        left: 5%;
+    }
+
+    .lastMidText {
+        position: absolute;
+        top: 10px;
+        width: 28vh;
+        left: 10vh;
+        font-size: 11px;
+    }
+
+    .lastFirstText {
+        position: absolute;
+        top: 20px;
+        width: 32vh;
+        left: 62px;
+        font-size: 11px;
+    }
+
+    .first {
+        position: absolute;
+        bottom: 105px;
+        left: 20%;
+    }
+
+    .firstText {
+        position: absolute;
+        height: 40px;
+        width: 29vh;
+        top: 8px;
+        left: 64px;
+        font-size: 11px;
+    }
+
+    .firstFirst {
+        right: 9%;
+    }
+
+    .firstFirstText {
+        width: 25vh;
+        font-size: 11px;
+    }
+}
+
+/* @media screen and (max-width: 1350px) {
+    .lastMidText {
+        width: 57vh;
+    }
+
+    .firstText {
+        width: 65vh;
+    }
+
+    .lastText {
+        width: 85vh
+    }
+} */
+
+@media screen and (min-width: 375px) and (max-width: 1024px) {
+    .bigText {
+        margin: auto;
+        width: 100%;
+        padding-bottom: 120px;
+        padding-top: 120px;
+        color: #ffffff;
+        position: relative;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .text {
+        margin: 0px 15px;
+    }
+
+    .carousel {
+        margin: 1px;
+        padding: 0px;
+        align-items: center;
+        width: 100%;
+        opacity: 0.8;
     }
 }

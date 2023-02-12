@@ -5,6 +5,8 @@ import Col from 'react-bootstrap/Col';
 import nims from './Nimsdai.module.css'
 import { firstRow, secondRaw, mainText } from './data';
 import Articles from '../articles/Articles';
+import { NavLink, Route, Routes } from 'react-router-dom';
+import Youtube from '../youtube/Youtube';
 const Nimsdai = ({id}) => {
     return (
         <div id={id} className={nims.container}>
@@ -21,7 +23,7 @@ const Nimsdai = ({id}) => {
                 <Row className={nims.raw}>
                     {firstRow.map((item) => {
                         return (
-                        <Col  key={item.id} className={nims.col}>
+                        <Col key={item.id} className={nims.col}>
                             <img alt={item.name} src={item.photo}/>
                             <span>{item.name}</span>
                         </Col>
@@ -32,7 +34,7 @@ const Nimsdai = ({id}) => {
                 <Row className={nims.raw}>
                 {secondRaw.map((item) => {
                         return (
-                        <Col className={nims.col}>
+                        <Col key={item.id} className={nims.col}>
                             <img alt={item.name} src={item.photo}/>
                             <span>{item.name}</span>
                         </Col>
@@ -40,7 +42,15 @@ const Nimsdai = ({id}) => {
                     })}
                 </Row>
             </Container>
-            <Articles/>
+                <h2 className={nims.team_title}><span>More information about this challenge</span></h2>
+                <nav className={nims.linksContainer}>
+                    <NavLink  className={nims.links} style={({isActive}) => ({color: isActive ? 'black' : 'white'})} to='articles'>Articles</NavLink>
+                    <NavLink  className={nims.links} style={({isActive}) => ({color: isActive ? 'black' : 'white'})} to='trailer'>Youtube</NavLink>
+                </nav>
+            <Routes>
+                <Route  path='articles' element={<Articles/>}/>
+                <Route  path='trailer' element={<Youtube/>}/>
+            </Routes>
         </div>
     );
 };

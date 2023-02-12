@@ -6,7 +6,8 @@ import {AiOutlineMail} from 'react-icons/ai'
 import foot from './Footer.module.css'
 function Footer({id}) {
   return (
-    <Container id={id} className={foot.container}>
+    <footer>
+      <Container id={id} className={foot.container}>
       <Row>
         <Col className={foot.col}>
             <p className={foot.author}>
@@ -27,6 +28,7 @@ function Footer({id}) {
         </Col>
       </Row>
     </Container>
+    </footer>
   );
 }
 
