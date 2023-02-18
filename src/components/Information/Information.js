@@ -5,26 +5,19 @@ import {AiOutlineDown} from 'react-icons/ai'
 import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
 const Information = ({id}) => {
     const [showMore, setShowMore] = useState(false);
-    const [first, setFirst] = useState(false)
-    const [firstFirst, setFirstFirst] = useState(false)
-    const [lastFirst, setLastFirst] = useState(false)
-    const [lastMid, setLastMid] = useState(false)
-    const [last, setLast] =useState(false)
-    const onHoverLast = () => {
-        setLast(!last)
-    }
-    const onHoverMid = () => {
-        setLastMid(!lastMid)
-    }
-    const onHover = () => {
-        setFirst(!first)
-    }
-    const onHoverfirst = () => {
-        setFirstFirst(!firstFirst)
-    }
-    const lastFirstHover = () => {
-        setLastFirst(!lastFirst)
-    }
+    const [hover, setHover] = useState({
+        first: false,
+        firstFirst: false,
+        lastFirst: false,
+        lastMid: false,
+        last: false,
+    });
+
+const onHover = (key) => {
+    setHover(prevHover => ({ ...prevHover, [key]: !prevHover[key] }));
+  };
+const shouldShowNextButton = Object.values(hover).every(h => h);
+
     const scrollToBOt = () => {
         const element = document.getElementById('bot');
         if (element) {
@@ -37,46 +30,48 @@ const Information = ({id}) => {
             <div className={info.img} data-background="https://k2.moncler.com/wp-content/uploads/2014/10/montagna.jpg"></div>
             <div className={info.general_information}>
                 {
-                    (first && firstFirst && lastFirst && lastMid && last) ? 
-                    <div onClick={scrollToBOt} className={info.bottom}>
-                    <span>NEXT</span>
-                    <AiOutlineDown/> 
-                    </div>
-                    : 
-                    null
+                    shouldShowNextButton ? (
+                        <div onClick={scrollToBOt} className={info.bottom}>
+                          <span>NEXT</span>
+                          <AiOutlineDown/> 
+                        </div>
+                      ) : null
                 }
                 <div className={info.title}>
                    <h2>K-2</h2>
                    <h5>HISTORY</h5>
                 </div>
                 <div className={info.last}>
-                <button onMouseOver={onHoverLast} className={info.dateBtn}>1954</button>
+                    <button onMouseOver={() => onHover('last')} className={info.dateBtn}>1954</button>
                     <div className={info.modal}>
-                        {last ? <p className={info.lastText}>On 31 July 1954, Italian climbers Achille Compagnoni and Lino Lacedelli became the first people to reach the summit of K2.</p> : null}
+                        {hover.last ? <p className={info.lastText}>On 31 July 1954, Italian climbers Achille Compagnoni and Lino Lacedelli became the first people to reach the summit of K2.</p> : null}
                     </div>
                 </div>
+
                 <div className={info.lastMid}>
-                    <button onMouseOver={onHoverMid} className={info.dateBtn}>1939</button>
+                    <button onMouseOver={() => onHover('lastMid')} className={info.dateBtn}>1939</button>
                     <div className={info.modal}>
-                        {lastMid ? <p className={info.lastMidText}>1939 - The American expedition of Fritz Weisner set a new record by climbing to a height of 8382 m of the North-East Ridge of Abruzza.</p> : null}
+                        {hover.lastMid ? <p className={info.lastMidText}>1939 - The American expedition of Fritz Weisner set a new record by climbing to a height of 8382 m of the North-East Ridge of Abruzza.</p> : null}
                     </div>
                 </div>
+
                 <div className={info.lastFirst}>
-                    <button onMouseOver={lastFirstHover} className={info.dateBtn}>1938</button>
+                    <button onMouseOver={() => onHover('lastFirst')} className={info.dateBtn}>1938</button>
                     <div className={info.modal}>
-                        {lastFirst ? <p className={info.lastFirstText}>1938 - American expedition of Dr. Charles S. Houston hit 7925 m.</p> : null}
+                        {hover.lastFirst ? <p className={info.lastFirstText}>1938 - American expedition of Dr. Charles S. Houston hit 7925 m.</p> : null}
                     </div>
                 </div>
+
                 <div className={info.first}>
-                    <button onMouseOver={onHover} className={info.dateBtn}>1902</button>
+                    <button onMouseOver={() => onHover('first')} className={info.dateBtn}>1902</button>
                     <div className={info.modal}>
-                        {first ? <p className={info.firstText}>In 1902, the first attempt was made by Oscar Eckenstein and Aleister Crowley, but ended unsuccessfully. <br/>They were able to climb only to a height of 6525 m.</p> : null}
+                        {hover.first ? <p className={info.firstText}>In 1902, the first attempt was made by Oscar Eckenstein and Aleister Crowley, but ended unsuccessfully. <br/>They were able to climb only to a height of 6525 m.</p> : null}
                     </div>
                 </div>
                 <div className={info.firstFirst}>
-                    <button onMouseOver={onHoverfirst} className={info.dateBtn}>1856</button>
+                    <button onMouseOver={() => onHover('firstFirst')} className={info.dateBtn}>1856</button>
                     <div className={info.modal}>
-                        {firstFirst ? <p className={info.firstFirstText}>Chogori was discovered by a European expedition in 1856.</p> : null}
+                        {hover.firstFirst ? <p className={info.firstFirstText}>Chogori was discovered by a European expedition in 1856.</p> : null}
                     </div>
                 </div>
             </div>

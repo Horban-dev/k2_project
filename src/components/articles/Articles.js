@@ -55,7 +55,7 @@ const Articles = () => {
     <div onClick={showMoreItems} className={art.btn}>
         {
             articlesFinished ? 
-            <button disabled className={art.button}>There are currently no more articles available...</button> :
+            <button disabled className={art.button}>There are no more currently available articles...</button> :
             <>
                 <button className={art.button}>More articles</button>
                 <br></br>

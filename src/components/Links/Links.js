@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import lin from './Links.module.css';
 import {useScrollPosition, useOnHoverOutside} from '../../hooks';
 import '../../App.css'
-import { Link, NavLink } from 'react-router-dom';
+import {NavLink } from 'react-router-dom';
 
 
 const Links = ({handleClickScroll}) => {
@@ -11,7 +11,28 @@ const Links = ({handleClickScroll}) => {
     const [visible, setVisible] = useState(false) 
     const dropdownRef = useRef(null); 
     const [isMenuDropDownOpen, setMenuDropDownOpen] = useState(false);
+    const [searchValue, setSearchValue] = useState("");
+
+    const handleInputChange = (event) => {
+      setSearchValue(event.target.value);
+    };
   
+    const handleSearch = () => {
+      const searchResult = window.find(searchValue);
+      if (!searchResult) {
+        alert(`No results found for '${searchValue}'.`);
+      }
+      setSearchValue("")
+    };
+    const handleKeyDown = (event) => {
+        if (event.keyCode === 13) {
+          // Enter key pressed
+          handleSearch();
+        }
+      };
+    useEffect(() => {
+        setVisible(true)
+    }, [])
     const closeHoverMenu = () => {
         setMenuDropDownOpen(false);
       };
@@ -43,6 +64,11 @@ const Links = ({handleClickScroll}) => {
             </button>
             </div>
             <button onClick={() => handleClickScroll('footer')} className={lin.link} href='#'>links</button>
+            
+            <div className={lin.search}>
+                <input onKeyDown={handleKeyDown} className={lin.searchInput} type="text" value={searchValue} onChange={handleInputChange} />
+                <button  className={lin.searchButton} onClick={handleSearch}>Search</button>
+            </div>
     </header>
    
     </>
