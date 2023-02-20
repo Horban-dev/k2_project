@@ -54,14 +54,13 @@ const Articles = () => {
     </Container>
     <div onClick={showMoreItems} className={art.btn}>
         {
-            articlesFinished ? 
-            <button disabled className={art.button}>There are no more currently available articles...</button> :
-            <>
-                <button className={art.button}>More articles</button>
-                <br></br>
-                <AiOutlinePlusCircle className={art.icon}/>
-            </>
-            
+        articlesFinished ? 
+        <button disabled className={art.button}>There are no more currently available articles...</button> :
+        <>
+            <button className={art.button}>More articles</button>
+            <br></br>
+            <AiOutlinePlusCircle className={art.icon}/>
+        </>
         }
         
     </div>
