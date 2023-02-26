@@ -289,66 +289,6 @@
     }
 }
 
-@media screen and (max-width: 413px) {
-    .last {
-        position: absolute;
-    }
-
-    .lastText {
-        position: absolute;
-        top: 0px;
-        height: 37px;
-        width: 24vh;
-        bottom: 102px;
-        font-size: 12px;
-        right: 73px;
-    }
-
-    .lastMid {
-        left: 5%;
-    }
-
-    .lastMidText {
-        position: absolute;
-        top: 10px;
-        width: 28vh;
-        left: 10vh;
-        font-size: 11px;
-    }
-
-    .lastFirstText {
-        position: absolute;
-        top: 20px;
-        width: 32vh;
-        left: 62px;
-        font-size: 11px;
-    }
-
-    .first {
-        position: absolute;
-        bottom: 105px;
-        left: 20%;
-    }
-
-    .firstText {
-        position: absolute;
-        height: 40px;
-        width: 29vh;
-        top: 8px;
-        left: 64px;
-        font-size: 11px;
-    }
-
-    .firstFirst {
-        right: 9%;
-    }
-
-    .firstFirstText {
-        width: 25vh;
-        font-size: 11px;
-    }
-
-}
 
 @media screen and (max-width: 992px) {
     .last {
@@ -410,6 +350,80 @@
     }
 }
 
+@media screen and (max-width: 413px) {
+    .last {
+        position: absolute;
+    }
+
+    .lastText {
+        position: absolute;
+        top: 0px;
+        height: 37px;
+        width: 22vh;
+        bottom: 102px;
+        font-size: 12px;
+        right: 90px;
+    }
+
+    .lastMid {
+        left: 5%;
+    }
+
+    .lastMidText {
+        position: absolute;
+        top: 10px;
+        width: 28vh;
+        left: 10vh;
+        font-size: 11px;
+    }
+
+    .lastFirstText {
+        position: absolute;
+        top: 20px;
+        width: 22vh;
+        left: 87px;
+        font-size: 11px;
+    }
+
+    .first {
+        position: absolute;
+        bottom: 88px;
+        left: 3%;
+    }
+
+    .firstText {
+        position: absolute;
+        height: 40px;
+        width: 29vh;
+        top: 8px;
+        left: 83px;
+        font-size: 11px;
+    }
+
+    .firstFirst {
+        right: 9%;
+    }
+
+    .firstFirstText {
+        width: 25vh;
+        font-size: 11px;
+    }
+    .text {
+        width: 90%;
+    }
+    .title {
+        width: 100%;
+    }
+    .carousel {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    width: 34%;
+    opacity: 0.8;
+    }
+
+}
 /* @media screen and (max-width: 1350px) {
     .lastMidText {
         width: 57vh;

@@ -194,7 +194,8 @@ blockquote p {
         border-left: 2px solid #f1b500;
         padding: 5px;
         right: 60px;
-        width: 45vh;
+    width: 38vh;
+    background-color: white;
         margin: 25px;
         line-height: 2;
         font-family: 'Aboreto', cursive;
